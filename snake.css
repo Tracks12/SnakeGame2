@@ -1,0 +1,14 @@
+/*******************************
+*                              *
+*    Project: Snake Game v2    *
+*    File: snake.css           *
+*                              *
+*******************************/
+
+* { padding: 0; margin: 0; overflow: hidden; }
+html { background-image: radial-gradient(#FFFFFF, #CCCCCC); height: 100%; width: 100%; }
+body { height: 100%; width: 100%; }
+
+/********
+*  END  *
+********/
