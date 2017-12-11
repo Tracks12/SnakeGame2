@@ -1,7 +1,7 @@
 /*******************************
 *                              *
 *    Project: Snake Game v2    *
-* 	 File: snakeGame.js        *
+*    File: snakeGame.js        *
 *    Version: 2.0              *
 *                              *
 *******************************/
