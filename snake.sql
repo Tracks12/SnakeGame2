@@ -8,7 +8,4 @@ CREATE TABLE IF NOT EXISTS `snake` (
   `score` int(255) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `snake` (player) VALUES
-('admin');
-
 -- END
