@@ -74,7 +74,7 @@ window.onload = function() {
 			game.fillStyle = '#222222';
 			game.textAlign = 'center';
 			game.fillText("SCORE : "+score*5, canvasWidth/2, canvasHeight-20)
-			game.fillText("POMME MANGER : "+score, canvasWidth/2, canvasHeight-5)
+			game.fillText("APPLE EAT : "+score, canvasWidth/2, canvasHeight-5)
 			timeOut = setTimeout(update, delay);
 			if(difficulty) hardcore();
 		}
@@ -85,7 +85,8 @@ window.onload = function() {
 		game.font = 'bold 60px Monospace';
 		game.fillText("GAME OVER", canvasWidth/2, canvasHeight/2);
 		game.font = 'bold 20px Monospace';
-		game.fillText("PRESS SPACE TO RESTART", canvasWidth/2, (canvasHeight/2)+15);
+		game.fillText("PRESS SPACE TO RESTART", canvasWidth/2, (canvasHeight/2)+19);
+		game.fillText("OR ESCAPE TO CHANGE PLAYER", canvasWidth/2, (canvasHeight/2)+38);
 		game.font = '15px Monospace';
 		game.textAlign = 'left';
 		game.fillText("> Snake Game 2.0", 5, 15);
@@ -208,7 +209,7 @@ window.onload = function() {
 		var key = e.keyCode;
 		var newDirect;
 		switch(key) {
-			case 27: document.location.reload(); break;
+			case 27: document.location.href = './'; break;
 			case 32: restart(); break;
 			case 37: newDirect = 'left'; break;
 			case 38: newDirect = 'down'; break;
