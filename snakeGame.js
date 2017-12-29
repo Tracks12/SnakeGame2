@@ -31,15 +31,6 @@ window.onload = function() {
 	var timeOut;
 	var k = 0;
 	
-	function hardcore() {
-		if(((score*5) === 100 || (score*5) === 200) && (delay === 100 || delay === 50)) { delay -= 25; }
-		if(k > 1) { k = 0; }
-		marg = [20, 20];
-		marg[k] += 1*score;
-		canvas.style.margin = marg[0]+'px 0px 0px '+marg[1]+'px';
-		return k++;
-	}
-	
 	function init() {
 		if(difficulty) { document.getElementById('sound').play(); }
 		canvas = document.createElement('canvas');
@@ -55,6 +46,15 @@ window.onload = function() {
 		applee = new apple([10, 10]);
 		score = 0;
 		update();
+	}
+	
+	function hardcore() {
+		if(((score*5) === 100 || (score*5) === 200) && (delay === 100 || delay === 50)) { delay -= 25; }
+		if(k > 1) { k = 0; }
+		marg = [20, 20];
+		marg[k] += 1*score;
+		canvas.style.margin = marg[0]+'px 0px 0px '+marg[1]+'px';
+		return k++;
 	}
 	
 	function update() {
