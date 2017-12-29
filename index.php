@@ -44,7 +44,7 @@
 			if(!isset($_GET['player'])) {
 				echo('<div>
 					<form method="GET" action>
-						<h1><label for="player">Snake Game v2</label><br /></h1>
+						<h1><label for="player">Snake Game</label><br /></h1>
 						<input type="text" id="player" name="player" placeholder="Player" required /><br />
 						<input type="submit" value="Start" />
 					</form>
