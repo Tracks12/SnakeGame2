@@ -63,6 +63,7 @@ window.onload = function() {
 		else {
 			if(snakee.eat(applee)) {
 				score++;
+				window.player['score'] = score*5;
 				snakee.eatApple = true;
 				do { applee.setNewPos(); }
 				while(applee.onSnake(snakee))
@@ -87,6 +88,8 @@ window.onload = function() {
 		game.font = 'bold 20px Monospace';
 		game.fillText("PRESS SPACE TO RESTART", canvasWidth/2, (canvasHeight/2)+19);
 		game.fillText("OR ESCAPE TO CHANGE PLAYER", canvasWidth/2, (canvasHeight/2)+38);
+		game.font = 'bold 30px Monospace';
+		game.fillText("YOUR PLACE : "+window.player['place'], canvasWidth/2, (canvasHeight-50));
 		game.font = '15px Monospace';
 		game.textAlign = 'left';
 		game.fillText("> Snake Game 2.0", 5, 15);
@@ -101,11 +104,11 @@ window.onload = function() {
 	
 	function leaderBoard(i, z) {
 		if(!z) { var z = 185; }
-		if(!i) { var i = 0; game.fillText("--- Top 10 Best Players ---", 5, canvasHeight-205); }
+		if(!i) { var i = 0; game.fillText("--- Top 10 Best Players ---", 25, canvasHeight-205); }
 		game.font = '15px Monospace';
 		game.textAlign = 'left';
 		game.fillText(leaderboard['player'][i], 5, canvasHeight-z);
-		game.fillText(leaderboard['score'][i], 155, canvasHeight-z);
+		game.fillText(leaderboard['score'][i], 205, canvasHeight-z);
 		z -= 20;
 		i++;
 		if(i < 10) { setTimeout(function() { leaderBoard(i, z); }, 25); }
@@ -168,8 +171,7 @@ window.onload = function() {
 			if(horizonWall || verticalWall) { wallCollide = true; }
 			for(var i = 0; i < this.body.slice(1).length; i++) {
 				if(this.body[0][0] === this.body.slice(1)[i][0] && this.body[0][1] === this.body.slice(1)[i][1]) { snakeCollide = true; } 
-			}
-			return wallCollide || snakeCollide;
+			} return wallCollide || snakeCollide;
 		}
 		this.eat = function(appleEat) {
 			var head = this.body[0];
@@ -200,8 +202,7 @@ window.onload = function() {
 			var onSnake = false;
 			for(var i = 0; i < checkSnake.body.length; i++) {
 				if(this.position[0] === checkSnake.body[i][0] && this.position[1] === checkSnake.body[i][1]) { onSnake = true; }
-			}
-			return onSnake;
+			} return onSnake;
 		}
 	}
 	
@@ -210,7 +211,8 @@ window.onload = function() {
 		var newDirect;
 		switch(key) {
 			case 27: document.location.href = './'; break;
-			case 32: restart(); break;
+			//case 32: restat(); break;
+			case 32: document.location.href = './?player='+window.player['name']+'&score='+window.player['score']; break;
 			case 37: newDirect = 'left'; break;
 			case 38: newDirect = 'down'; break;
 			case 39: newDirect = 'right'; break;
