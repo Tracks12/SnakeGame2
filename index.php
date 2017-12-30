@@ -44,7 +44,6 @@
 		<meta charset="UTF-8">
 		<title>Snake Game v2</title>
 		<link rel="stylesheet" type="text/css" href="./snake.css" />
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<?php if(isset($_GET['player'])) { echo('<script language="javascript" type="text/javascript" src="./snakeGame.js"></script>'); } ?>
 	</head>
 	<body>
