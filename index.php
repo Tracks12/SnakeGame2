@@ -13,11 +13,11 @@
 			}
 			
 			private static $bdd;
-			private static $host = '127.0.0.1'; // hôte de la base de donnée
-			private static $dbName = 'snake'; // nom de la base de donnée
-			private static $encoding = 'utf8'; // encodage à utiliser
-			private static $username = 'root'; // utilisateur de connexion
-			private static $password = 'toor'; // mot de passe utilisateur
+			private static $host = ''; // hôte de la base de donnée
+			private static $dbName = ''; // nom de la base de donnée
+			private static $encoding = ''; // encodage à utiliser
+			private static $username = ''; // utilisateur de connexion
+			private static $password = ''; // mot de passe utilisateur
 		}
 		
 		$bdd = dataBase::connect();
