@@ -2,7 +2,7 @@
 Jeu Web JavaScript pour s'éclater de manière ridicule avec ses potes.
 
 > Insérer votre nom de joueur
-<img src='https://raw.githubusercontent.com/Tracks12/SnakeGame2/master/screenshots/player.png' />
+<img src='https://raw.githubusercontent.com/Tracks12/SnakeGame2/master/screenshots/playername.png' />
 
 > Puis amusez-vous
 <img src='https://raw.githubusercontent.com/Tracks12/SnakeGame2/master/screenshots/play.png' />
