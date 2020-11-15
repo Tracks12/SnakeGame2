@@ -1,6 +1,8 @@
 -- Snake Game v2
 -- snake.sql
 
+CREATE DATABASE IF NOT EXISTS `snake`;
+
 CREATE TABLE IF NOT EXISTS `snake` (
 	`player` varchar(255),
 	`score` int(255) NOT NULL DEFAULT 0
